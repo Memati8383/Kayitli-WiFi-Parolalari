@@ -1,23 +1,55 @@
-# Python
+# Python Ön Bellek
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Uygulamaya Özel Çıktılar
+wifi_export.json
+wifi_export.csv
+WiFi_QR_*.png
+AuraWiFi.spec
+
+# İkon ve Medya (Gerekirse açılabilir, ancak inşa dosyaları hariç tutulmalı)
+# icon.png -> Repo'da kalması iyidir.
+
+# Sanal Ortamlar
 .venv/
 env/
 venv/
 ENV/
+pip-log.txt
+pip-delete-this-directory.txt
 
-# GUI/App specific
-wifi_export.json
-wifi_export.csv
-*.png
-*.ico
-
-# Windows
+# Windows Sistem Dosyaları
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+$RECYCLE.BIN/
 
-# IDEs
+# Editör/IDE Ayarları
 .vscode/
 .idea/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
