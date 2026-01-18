@@ -1,64 +1,83 @@
-# Aura Wireless Intelligence 📡
-
-Aura Wireless Intelligence, kayıtlı Wi-Fi parolalarını görüntülemek, yönetmek ve paylaşmak için tasarlanmış modern, güvenli ve kullanıcı dostu bir Windows masaüstü uygulamasıdır.
-
----
-
-## 🚀 Özellikler
-
-- **Gelişmiş Arayüz:** CustomTkinter ile oluşturulmuş, modern ve dinamik tasarım.
-- **Dinamik Dil Desteği:** Tek tıkla Türkçe ve İngilizce arasında geçiş.
-- **Parola Yönetimi:** Kayıtlı Wi-Fi parolalarını görüntüleme, arama ve kopyalama.
-- **QR Kod Oluşturma:** Wi-Fi ağlarını anında paylaşmak için QR kod üretme ve kaydetme.
-- **Dışa Aktarma:** Verilerinizi JSON veya CSV formatında yedekleme.
-- **Sistem İstatistikleri:** Aktif bağlantı durumu, sinyal gücü ve hız takibi.
-- **Gizlilik Odaklı:** Parolaları maskeleme/gösterme seçeneği ve sistem tepsisine (tray) küçülme özelliği.
-- **Yönetici Yetkisi:** Gerekli sistem bilgilerine erişim için otomatik yönetici (admin) kontrolü.
+<div align="center">
+  <img src="icon.png" alt="Aura Logo" width="120">
+  <h1>Aura Wireless Intelligence</h1>
+  <p><b>Windows için Modern Wi-Fi Yönetim Aracı</b></p>
+</div>
 
 ---
 
-## 📦 Çalıştırılabilir Dosya (EXE) Oluşturma
+**Aura Wireless Intelligence**, kayıtlı Wi-Fi parolalarını yönetmek, görüntülemek, dışa aktarmak ve paylaşmak için tasarlanmış, **CustomTkinter** tabanlı modern bir masaüstü uygulamasıdır. Zarif tasarımı ve güçlü özellikleriyle ağ yönetimini bir üst seviyeye taşır.
 
-Projeyi tek bir `.exe` dosyasına dönüştürmek için PyInstaller kullanabilirsiniz:
+## 🚀 Öne Çıkan Özellikler
 
-1. **Gerekli araçları yükleyin:**
-
-   ```bash
-   pip install pyinstaller
-   ```
-
-2. **Derleme komutunu çalıştırın:**
-   ```bash
-   pyinstaller --noconfirm --onefile --windowed --icon="icon.png" --name "AuraWiFi" --add-data "$(python -c 'import customtkinter; import os; print(os.path.dirname(customtkinter.__file__))');customtkinter" wifi.py
-   ```
-   _Not: Oluşturulan dosya `dist/` klasöründe yer alacaktır._
+- **🎨 Modern ve Estetik Arayüz:** Karanlık mod destekli, akıcı ve kullanıcı dostu tasarım.
+- **🌍 Çoklu Dil Desteği:** **Türkçe** ve **İngilizce** dilleri arasında anlık geçiş imkanı.
+- **🔑 Akıllı Parola Yönetimi:**
+  - Kayıtlı tüm ağları listeleyin.
+  - Parolaları gizleyin/gösterin.
+  - Tek tıkla panoya kopyalayın.
+- **📱 QR Kod Paylaşımı:** Misafirleriniz için Wi-Fi ağınızı anında **QR Kod**'a dönüştürün ve `png` olarak kaydedin.
+- **📊 Canlı Sistem Analizi:** Aktif ağın sinyal kalitesini, bağlantı durumunu ve arayüz detaylarını canlı takip edin.
+- **💾 Veri Yedekleme:** Ağ bilgilerinizi **JSON** veya **CSV** formatında dışa aktarın.
+- **🛡️ Güvenli ve Yetkili:** Sistem komutlarına erişim için uygulama otomatik olarak yönetici izni ister.
 
 ---
 
 ## 🛠 Kurulum ve Gereksinimler
 
-- **İşletim Sistemi:** Windows (Netsh komutları için gereklidir).
-- **Python:** 3.8 veya üzeri.
+Proje **Windows 10/11** işletim sistemlerinde çalışmak üzere tasarlanmıştır.
 
-1. **Depoyu klonlayın:**
-   ```bash
-   git clone https://github.com/Memati8383/Kayitli-WiFi-Parolalari.git
-   ```
-2. **Gerekli kütüphaneleri yükleyin:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Uygulamayı başlatın:**
-   ```bash
-   python wifi.py
-   ```
+### Ön Hazırlık
+
+Sisteminizde **Python 3.8+** ve **Git**'in yüklü olduğundan emin olun.
+
+### 1. Projeyi İndirin
+
+```bash
+git clone https://github.com/Memati8383/Kayitli-WiFi-Parolalari.git
+cd Kayitli-WiFi-Parolalari
+```
+
+### 2. Kütüphaneleri Yükleyin
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Çalıştırın
+
+```bash
+python wifi.py
+```
+
+---
+
+## 📦 EXE (Uygulama) Olarak Derleme
+
+Uygulamayı bağımsız bir `.exe` dosyasına dönüştürmek için **PyInstaller** kullanıyoruz. Aşağıdaki komut, tüm bağımlılıkları ve `CustomTkinter` temasını tek bir dosyada toplar.
+
+```bash
+# PyInstaller yüklü değilse:
+pip install pyinstaller
+
+# Derleme komutu:
+pyinstaller --noconfirm --onefile --windowed --icon="icon.png" --name "AuraWiFi" --add-data "$(python -c 'import customtkinter; import os; print(os.path.dirname(customtkinter.__file__))');customtkinter" wifi.py
+```
+
+> **Bilgi:** Derleme tamamlandığında `AuraWiFi.exe` dosyası **`dist/`** klasöründe oluşacaktır.
+
+---
+
+## 🤝 Katkıda Bulunma
+
+Katkılarınızı bekliyoruz! Hata bildirimleri, özellik istekleri veya Pull Request'ler için lütfen GitHub deposunu kullanın.
 
 ---
 
 ## 📝 Lisans
 
-Bu proje MIT Lisansı ile lisanslanmıştır.
+Bu proje **MIT Lisansı** ile korunmaktadır.
 
-## 🤝 İletişim
-
-[Memati8383](https://github.com/Memati8383)
+<div align="center">
+  <sub>Geliştirici: <a href="https://github.com/Memati8383">Memati8383</a></sub>
+</div>
