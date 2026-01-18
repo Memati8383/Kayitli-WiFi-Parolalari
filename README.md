@@ -17,6 +17,20 @@ Aura Wireless Intelligence, kayıtlı Wi-Fi parolalarını görüntülemek, yön
 - **Gizlilik Odaklı:** Parolaları maskeleme/gösterme seçeneği ve sistem tepsisine (tray) küçülme özelliği.
 - **Yönetici Yetkisi:** Gerekli sistem bilgilerine erişim için otomatik yönetici (admin) kontrolü.
 
+### Çalıştırılabilir Dosya (EXE) Oluşturma
+
+Projeyi tek bir `.exe` dosyasına dönüştürmek için PyInstaller kullanabilirsiniz:
+
+1. Gerekli araçları yükleyin:
+   ```bash
+   pip install pyinstaller
+   ```
+2. Derleme komutunu çalıştırın:
+   ```bash
+   pyinstaller --noconfirm --onefile --windowed --icon="icon.png" --name "AuraWiFi" --add-data "$(python -c 'import customtkinter; import os; print(os.path.dirname(customtkinter.__file__))');customtkinter" wifi.py
+   ```
+   _Not: Oluşturulan dosya `dist/` klasöründe yer alacaktır._
+
 ### Kurulum
 
 1. Depoyu klonlayın:
@@ -46,6 +60,20 @@ Aura Wireless Intelligence, kayıtlı Wi-Fi parolalarını görüntülemek, yön
 - **System Stats:** Live monitoring of connection status, signal strength, and speed.
 - **Privacy Oriented:** Password masking/unmasking and system tray support.
 - **Admin Privileges:** Automatic administrative check for secure system data access.
+
+### Creating Executable (EXE)
+
+You can convert the project into a standalone `.exe` file using PyInstaller:
+
+1. Install PyInstaller:
+   ```bash
+   pip install pyinstaller
+   ```
+2. Run the build command:
+   ```bash
+   pyinstaller --noconfirm --onefile --windowed --icon="icon.png" --name "AuraWiFi" --add-data "$(python -c 'import customtkinter; import os; print(os.path.dirname(customtkinter.__file__))');customtkinter" wifi.py
+   ```
+   _Note: The executable will be generated in the `dist/` folder._
 
 ### Requirements
 
