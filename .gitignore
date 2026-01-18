@@ -23,6 +23,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+AuraWiFi.spec
 
 # --- Sanal Ortamlar ---
 .env
