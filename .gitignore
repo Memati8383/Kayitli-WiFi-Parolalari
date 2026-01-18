@@ -1,9 +1,11 @@
-# Python Ön Bellek
+# --- Python Temel ---
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+# --- Dağıtım ve Build (PyInstaller vb.) ---
 build/
 develop-eggs/
 dist/
@@ -22,30 +24,16 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Uygulamaya Özel Çıktılar
-wifi_export.json
-wifi_export.csv
-WiFi_QR_*.png
-AuraWiFi.spec
-
-# İkon ve Medya (Gerekirse açılabilir, ancak inşa dosyaları hariç tutulmalı)
-# icon.png -> Repo'da kalması iyidir.
-
-# Sanal Ortamlar
-.venv/
+# --- Sanal Ortamlar ---
+.env
+.venv
 env/
 venv/
 ENV/
-pip-log.txt
-pip-delete-this-directory.txt
+env.bak/
+venv.bak/
 
-# Windows Sistem Dosyaları
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-# Editör/IDE Ayarları
+# --- IDE ve Editör Ayarları ---
 .vscode/
 .idea/
 *.swp
@@ -53,3 +41,27 @@ $RECYCLE.BIN/
 .project
 .pydevproject
 .settings/
+
+# --- Windows Sistem Dosyaları ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Proje Özel Çıktıları ---
+# Export edilen veriler repo'yu kirletmemeli
+wifi_export.json
+wifi_export.csv
+wifi_export.txt
+
+# Oluşturulan QR Kodları
+WiFi_QR_*.png
+
+# Log dosyaları
+*.log
+pip-log.txt
+
+# --- İstisnalar (Bu dosyalar her zaman repo'da kalsın) ---
+!icon.png
+!README.md
+!.gitignore
